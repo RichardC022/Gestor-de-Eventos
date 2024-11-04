@@ -10,8 +10,9 @@ public class Reserva {
     private Date fechaReserva;
     private boolean estado;
     private EventoPrivado eventoPrivado;
+    private List<Pago> pagos;
 
-    public Reserva(int id, int eventoId, int usuarioId, int cantidadEntradas, Date fechaReserva, boolean estado, EventoPrivado eventoPrivado){
+    public Reserva(int id, int eventoId, int usuarioId, int cantidadEntradas, Date fechaReserva, boolean estado, EventoPrivado eventoPrivado, List<Pago> pagos) {
         this.id = id;
         this.eventoId = eventoId;
         this.usuarioId = usuarioId;
@@ -19,6 +20,16 @@ public class Reserva {
         this.fechaReserva = fechaReserva;
         this.estado = estado;
         this.eventoPrivado = eventoPrivado;
+        this.pagos = pagos;
+    }
+
+    // Getters y Setters para pagos
+    public List<Pago> getPagos() {
+        return pagos;
+    }
+
+    public void setPagos(List<Pago> pagos) {
+        this.pagos = pagos;
     }
 
     public int getId() {
