@@ -9,7 +9,6 @@ public class Pago {
     private float monto;
     private String estadoPago;
     private TipoPago tipoPago; // Relación con el enum TipoPago
-
     private Reserva reserva; // Relación con Reserva
 
     public Pago(int id, int reservaId, Date fechaPago, float monto, String estadoPago, TipoPago tipoPago, Reserva reserva) {
